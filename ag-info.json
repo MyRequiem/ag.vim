@@ -1,0 +1,12 @@
+{
+    "name" : "ag",
+    "version" : "1.0",
+    "author" : "MyRequiem <mrvladislavovich@gmail.com>",
+    "maintainer" : "MyRequiem <mrvladislavovich@gmail.com>",
+    "repository" : {
+        "type": "git",
+        "url": "git://github.com/MyRequiem/ag.vim"
+    },
+    "dependencies" : {},
+    "description" : "ag -- Integration Ag with Vim"
+}

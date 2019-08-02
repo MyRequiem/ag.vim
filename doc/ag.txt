@@ -1,0 +1,150 @@
+*ag.txt* Integration Ag with Vim
+
+				    ___             ~
+				   /   | ____ _     ~
+				  / /| |/ __ `/     ~
+				 / ___ / /_/ /      ~
+				/_/  |_\__, /       ~
+				      /____/        ~
+
+		 Better than ack, which is better than grep ~
+		     Version: 1.0 Last change: 02.08.19 ~
+
+			      Reference Manual~
+==============================================================================
+CONTENTS							 *ag-contents*
+
+	1.Introduction .......................... |ag-introduction|
+	2.Usage ................................. |ag-usage|
+	3.Configuation .......................... |ag-configuation|
+		3.1.Enable/disable plugin ....... |g:loaded_ag|
+		3.2.Hotkeys ..................... |g:ag_hotkey|
+		3.3.Ag parameters ............... |g:ag_param|
+		3.4.|quickfix| window height ...... |g:ag_quickfix_height|
+		3.5.Matches highlighting ........ |g:ag_highlight_matches|
+		3.6.Colors ...................... |g:ag_highlight_color|
+		3.7.Settings for 'errorformat' .. |g:ag_err_format|
+		3.8.|quickfix| window layout ...... |g:ag_quickfix_window_on_top|
+	4.Mappings .............................. |ag-mappings|
+	5.Changelog ............................. |ag-changelog|
+	6.Contributions ......................... |ag-contributions|
+	7.License ............................... |ag-license|
+	8.About ................................. |ag-about|
+
+==============================================================================
+INTRODUCTION						     *ag-introduction*
+	This plugin is a front for `the_silver_searcher: ag`. Ag can be used
+	as a replacement for `ack` and `grep` (better than ack, which is better
+	than grep). Plugin will allow you to run `ag` from Vim, and shows the
+	results in a |quickfix| window.
+
+	You can find `the_silver_searcher` utility at:
+	Home page:  `https://github.com/ggreer/the_silver_searcher`
+	Clone:	    `git clone https://github.com/ggreer/the_silver_searcher`
+==============================================================================
+USAGE                                                               *ag-usage*
+	|Normal-mode|: press hotkey (default <leader>g, see |g:ag_hotkey|) and
+		     `Ag` will find all matches of the word under the cursor
+		     recursively in the current directory.
+
+	|Visual-mode|: press hotkey (default <leader>g, see |g:ag_hotkey|) and
+		     `Ag` will find all matches of the selected text in the
+		     current directory.
+
+		`Note:` Visual line-wise mode (V) is not allowed. Selection
+		      for `ag` should be only on one line.
+
+	|Command-line|  :Ag {pattern}
+==============================================================================
+CONFIGUATION						     *ag-configuation*
+
+	   You can specify any options listed below in your |vimrc|
+------------------------------------------------------------------------------
+|g:loaded_ag| (default: 0)					 *g:loaded_ag*
+	To disable the plugin set this variable to 1 >
+		let g:loaded_ag = 1
+<
+------------------------------------------------------------------------------
+|g:ag_hotkey| (default: <leader>g)				 *g:ag_hotkey*
+	Keyboard shortcut for launch ag >
+		let g:ag_hotkey = '<leader>g'
+<
+------------------------------------------------------------------------------
+|g:ag_param|							  *g:ag_param*
+	List of parameters for `ag` utility. Default: >
+		let g:ag_param = [
+			\ '--nogroup',
+			\ ' --context=0',
+			\ ' --nocolor',
+			\ ' --filename',
+			\ ' --numbers',
+			\ ' --print-long-lines',
+			\ ' --silent',
+			\ ' --hidden',
+			\ ' --case-sensitive',
+			\ ' $*'
+		\]
+<
+------------------------------------------------------------------------------
+|g:ag_quickfix_height| (default: '10')			*g:ag_quickfix_height*
+	quickfix window height >
+		let g:ag_quickfix_height = '10'
+<
+------------------------------------------------------------------------------
+|g:ag_highlight_matches| (default: 0)		      *g:ag_highlight_matches*
+	If 1, highlight the search terms after searching >
+		let g:ag_highlight_matches = 1
+<
+------------------------------------------------------------------------------
+|g:ag_highlight_color| (default: 0)			*g:ag_highlight_color*
+	If |g:ag_highlight_matches| is set to 1, matches found are highlighted
+	in red by default. if you want to change the color set the variable: >
+		let g:ag_highlight_color = 'highlight AgMatches ' .
+			\ 'term=... cterm=... ctermfg=... 'ctermbg=... ' .
+			\ 'gui=... guisp=... guifg=... guibg=...'
+<
+	see |highlight| command for more detailed
+------------------------------------------------------------------------------
+|g:ag_err_format| (default: '%f:%l:%m')			     *g:ag_err_format*
+	Format to recognize the matches. See 'errorformat' for more info.  >
+		let g:ag_err_format = '%f:%l:%m'
+<
+------------------------------------------------------------------------------
+|g:ag_quickfix_window_on_top| (default: 0)	 *g:ag_quickfix_window_on_top*
+	If 1, quickfix window will appear on top, otherwise on bottom >
+		let g:ag_err_format = 1
+<
+==============================================================================
+MAPPINGS							 *ag-mappings*
+<leader>g
+	|Normal-mode|: find all matches of the word under the cursor
+		     recursively in the current directory.
+	|Visual-mode|: find all matches of the selected text in the current
+		     directory.
+		     `Note:` Visual line-wise mode (V) is not allowed.
+			   Selection for `ag` should be only on one line.
+
+	To change a keyboard shortcut, see |g:ag_hotkey|
+==============================================================================
+CHANGELOG							*ag-changelog*
+    `https://raw.githubusercontent.com/MyRequiem/ag.vim/master/ChangeLog.txt`
+
+==============================================================================
+CONTRIBUTIONS						    *ag-contributions*
+	Contributions and pull requests are welcome
+		`https://github.com/MyRequiem/ag.vim`
+
+==============================================================================
+LICENSE								  *ag-license*
+    MIT License:
+	`https://raw.githubusercontent.com/MyRequiem/ag.vim/master/LICENSE`
+
+==============================================================================
+ABOUT								    *ag-about*
+	Author: MyRequiem <mrvladislavovich@gmail.com>
+
+	Find the latest version of `ag.vim` at:
+		`https://github.com/MyRequiem/ag.vim`
+
+==============================================================================
+vim:tw=78:ts=8:sw=8:ft=help:norl:noet:
