@@ -8,7 +8,7 @@
 				      /____/        ~
 
 		 Better than ack, which is better than grep ~
-		     Version: 1.0 Last change: 02.08.19 ~
+		     Version: 1.1 Last change: 20.08.19 ~
 
 			      Reference Manual~
 ==============================================================================

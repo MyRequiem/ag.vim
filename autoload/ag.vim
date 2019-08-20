@@ -18,9 +18,6 @@ function! s:showQuickFixWindow(str)
     if g:ag_highlight_matches
         let l:matchstr = substitute(a:str, '\', '\\\\', 'g')
         let l:matchstr = substitute(l:matchstr, ']', '\\]', 'g')
-        if exists('g:ag_highlight_color') &&  !empty(g:ag_highlight_color)
-            execute g:ag_highlight_color
-        endif
         call matchadd('AgMatches', l:matchstr, -1)
     endif
 endfunction " 1}}}
