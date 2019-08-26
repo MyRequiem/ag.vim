@@ -1,4 +1,4 @@
-*ag.txt* Integration Ag with Vim
+*ag.txt* Integration Ag with Vim		      Last change: 2019 Aug 20
 
 				    ___             ~
 				   /   | ____ _     ~
