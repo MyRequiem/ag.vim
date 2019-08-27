@@ -1,4 +1,4 @@
-*ag.txt* Integration Ag with Vim		      Last change: 2019 Aug 20
+*ag.txt*		For Vim version 8.1.	      Last change: 2019 Aug 20
 
 				    ___             ~
 				   /   | ____ _     ~
@@ -7,6 +7,7 @@
 				/_/  |_\__, /       ~
 				      /____/        ~
 
+			    Integration Ag with Vim ~
 		 Better than ack, which is better than grep ~
 		     Version: 1.1 Last change: 20.08.19 ~
 
