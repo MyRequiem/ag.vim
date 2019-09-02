@@ -48,7 +48,7 @@ else
         \ 'ctermbg=NONE gui=NONE guisp=NONE guifg=#AA0000 guibg=NONE'
 endif
 
-execute 'noremap  <silent>' . g:ag_hotkey . ' :call ag#Ag(1)<cr>'
+execute 'nnoremap <silent>' . g:ag_hotkey . ' :call ag#Ag(1)<cr>'
 execute 'vnoremap <silent>' . g:ag_hotkey . ' :call ag#Ag(0)<cr>'
 
 command -nargs=* Ag call ag#AgCommand(<f-args>)
