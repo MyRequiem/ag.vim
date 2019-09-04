@@ -17,7 +17,7 @@ CONTENTS							 *ag-contents*
 
 	1.Introduction .......................... |ag-introduction|
 	2.Usage ................................. |ag-usage|
-	3.Configuation .......................... |ag-configuation|
+	3.Configuration ......................... |ag-configuration|
 		3.1.Enable/disable plugin ....... |g:loaded_ag|
 		3.2.Hotkeys ..................... |g:ag_hotkey|
 		3.3.Ag parameters ............... |g:ag_param|
@@ -57,7 +57,7 @@ USAGE                                                               *ag-usage*
 
 	|Command-line|  :Ag {pattern}
 ==============================================================================
-CONFIGUATION						     *ag-configuation*
+CONFIGURATION						    *ag-configuration*
 
 	   You can specify any options listed below in your |vimrc|
 ------------------------------------------------------------------------------
